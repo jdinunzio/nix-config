@@ -1,4 +1,11 @@
 {
+  home.file = {
+    ".config/helix" = {
+      source = dotfiles/helix;
+      recursive = true;
+    };
+  };
+
   programs.helix = {
     enable = true;
     defaultEditor = true;
@@ -9,7 +16,8 @@
     ];
 
     settings = {
-        theme = "onedark";
+        # theme = "onedark";
+        theme = "goyo";
 
         editor = {
             shell = ["fish" "-c"];
