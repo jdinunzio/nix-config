@@ -1,34 +1,29 @@
 {
-  description = "Home Manager configuration of goyo";
+  description = "NixOs, Darwin-Nix, and Home Manager configuration";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, ... }:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-    in {
-      homeConfigurations."goyo" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+  outputs = { nixpkgs, home-manager, ... }: {
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ];
+    # mcfly: goyo @ nixos + home-manager
+    nixosConfigurations.mcfly = nixpkgs.lib.nixosSystem {
+      modules = [
+        ./hosts/mcfly
+        ./users/goyo/nixos.nix
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
-        extraSpecialArgs = {
-          inherit pkgs-unstable;
-        };
-      };
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.goyo = import ./users/goyo/home.nix;
+        }
+      ];
     };
+    
+  };
 }

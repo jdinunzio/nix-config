@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 
 {
   # Configuration to install neovim and use lazyvim with it.
@@ -9,16 +9,13 @@
   # * Neovim's `nvim` config folder moved to this repo, to keep
   #   configuration in the same place.
   #
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; [
       # vim
       lua51Packages.lua
       luarocks-nix
       fd
       lazygit
-      ripgrep
-  ])
-  ++ 
-  (with pkgs-unstable; [
       neovim
-  ]);
+      ripgrep
+  ];
 }

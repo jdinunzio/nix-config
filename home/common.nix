@@ -1,32 +1,12 @@
-{ config, pkgs, pkgs-unstable, inputs, ... }:
+{ pkgs, ... }:
 
 {
-  home.username = "goyo";
-  home.homeDirectory = "/home/goyo";
-
-  imports = [
-    ./direnv.nix
-    ./dotfiles.nix
-    ./fish.nix
-    ./git.nix
-    ./helix.nix
-    ./kitty.nix
-    ./nvim.nix
-    ./shell.nix
-    ./ssh.nix
-    ./vscode.nix
-  ];
-
-  # You should not change this value.
-  home.stateVersion = "24.11"; # Please read the comment before changing.
-
-  home.packages = 
-    (with pkgs; [
+  home.packages = with pkgs; [
       # langs
       cargo
       gcc
       ghc
-      python312Full
+      python312
       # go
       bazel
       bazelisk
@@ -38,9 +18,6 @@
       grpcui
 
       # devel
-      # awscli2
-      # devenv
-      # google-cloud-sdk-gce
       gnumake42
       httpie
       k3d
@@ -52,6 +29,8 @@
       ack
       bat
       below
+      devbox
+      devenv
       encfs
       ffmpeg
       fzf
@@ -61,18 +40,25 @@
       gnupg
       grc
       imagemagick
+      just
       jq
       lm_sensors
       mmv-go
+      nil
       nixVersions.nix_2_28
       pass
       pinentry-tty
       rar
-      yq
-      yt-dlp
+      # kitty
+      ty
+      vdhcoapp
+      video-downloader
       wmctrl
       xsensors
-
+      yazi
+      yq
+      yt-dlp
+      
       # apps
       brave
       comical
@@ -96,20 +82,6 @@
       libwebp
       zlib
 
-    ]) 
-    ++ 
-    (with pkgs-unstable; [
-      # cli
-      devbox
-      devenv
-      just
-      # kitty
-      nil
-      ty
-      vdhcoapp
-      video-downloader
-      yazi
-      
       # lsp
       docker-language-server
       docker-compose-language-service
@@ -125,26 +97,5 @@
       superhtml
       vscode-langservers-extracted
       yaml-language-server
-    ]);
-
-  home.language = {
-    collate = "C";
-  };
-
-  home.sessionVariables = {
-    LC_COLLATE = "C";
-  };
-
-  dconf.settings = {
-    "org.gnome.desktop.wm.keybindings" = {
-      switch-group = ["<Super>Above_Tab"];
-    };
-  };
-
-  # Let Home Manager install and manage itself.
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnfreePredicate = (_: true);
-  };
-  programs.home-manager.enable = true;
+    ];
 }
