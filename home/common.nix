@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  # packages common to linux and darwin
+
   home.packages = with pkgs; [
       # langs
       cargo
@@ -8,8 +10,6 @@
       ghc
       python312
       # go
-      bazel
-      bazelisk
       go
       mage
       #nodejs_23
@@ -28,10 +28,8 @@
       # cli
       ack
       bat
-      below
       devbox
       devenv
-      encfs
       ffmpeg
       fzf
       fishPlugins.grc
@@ -42,7 +40,6 @@
       imagemagick
       just
       jq
-      lm_sensors
       mmv-go
       nil
       nixVersions.nix_2_28
@@ -51,32 +48,22 @@
       rar
       # kitty
       ty
-      vdhcoapp
       video-downloader
       wmctrl
-      xsensors
       yazi
       yq
       yt-dlp
-      
+
       # apps
       brave
       comical
-      dropbox
       firefox
-      gnomeExtensions.system-monitor
       helix
       jetbrains.idea-community
       #jetbrains.goland
       jetbrains.pycharm-community-bin
-      libreoffice-fresh
-      maestral  # dropbox replacement
-      maestral-gui
-      media-downloader
       mpv
       #steam
-      speechd
-      typora
 
       # libs
       libwebp

@@ -2,14 +2,15 @@
 
 {
   home.username = "goyo";
-  home.homeDirectory = "/home/goyo";
+  home.homeDirectory = "/Users/goyo";
 
   imports = [
     ../../home/common.nix
+    # ../../home/darwin.nix
     ../../home/direnv.nix
     ../../home/dotfiles.nix
     ../../home/fish.nix
-    ../../home/git.nix
+    ../../home/git-jose-mac.nix
     ../../home/helix.nix
     ../../home/kitty.nix
     ../../home/nvim.nix
