@@ -26,12 +26,7 @@
       cargo
       gcc
       ghc
-      #python313Full
       python312Full
-      python313Packages.jedi-language-server
-      python312Packages.pip
-      python312Packages.python-lsp-server
-      temurin-jre-bin-21
       # go
       bazel
       bazelisk
@@ -63,12 +58,15 @@
       fishPlugins.grc
       gh
       gifsicle
+      gnupg
       grc
       imagemagick
       jq
       lm_sensors
       mmv-go
       nixVersions.nix_2_28
+      pass
+      pinentry-tty
       rar
       yq
       yt-dlp
@@ -118,7 +116,11 @@
       fish-lsp
       just-lsp
       jq-lsp
+      python313Packages.jedi-language-server
+      python312Packages.pip
+      python312Packages.python-lsp-server
       taplo
+      temurin-jre-bin-21
       tombi
       superhtml
       vscode-langservers-extracted
