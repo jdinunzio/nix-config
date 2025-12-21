@@ -1,1 +1,4 @@
 tmp/
+# system/nix-extra-options.nix already in git repo, with empty value
+# so that it can be override locally with a github token
+system/nix-extra-options.nix

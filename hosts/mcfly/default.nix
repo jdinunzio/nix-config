@@ -5,16 +5,20 @@
 { config, pkgs, ... }:
 
 {
+  networking.hostName = "mcfly";
+  
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../system/linux.nix
+      ../../system/nix.nix
+      ../../system/nix-extra-options.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "mcfly";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -74,62 +78,6 @@
     pulse.enable = true;
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    # console apps
-    dropbox-cli
-    fish
-    fishPlugins.grc
-    helix
-    killall
-    maestral
-    mplayer
-    # neovim
-    # nerdfonts
-    #nixVersions.nix_2_23
-    # graphical apps
-    chromium
-    evince
-    firefox
-    geeqie
-    dconf-editor
-    gnome-control-center
-    gnome-tweaks
-    gnomeExtensions.freon
-    google-chrome
-    libreoffice
-    steam-run
-    vlc
-    xorg.xkill
-    zoom-us
-    # cli tools
-    ack
-    bat
-    btop
-    curl
-    docker
-    encfs
-    file
-    git
-    grc
-    htop
-    jq
-    libuuid
-    pstree
-    rsync
-    tmux
-    tree
-    unzip
-    webex
-    wget
-    yq
-    xsel
-    zip
-    # libs
-    openssl
-  ];
-
   programs.evince.enable = true;
 
   programs.fish = {
@@ -170,24 +118,6 @@
 
   virtualisation.docker.enable = true;
   
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  nix.settings = {
-    trusted-users = [ "root" "goyo"];
-    experimental-features = [ "nix-command" "flakes" ];
-    substituters = [
-      "https://cache.nixos.org"
-      "https://cache.nixos.org/"
-      "https://nixpkgs-python.cachix.org"
-      "https://jdinunzio.cachix.org"
-    ];
-    trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU= jdinunzio.cachix.org-1:nAfNdntw+nNpEAGfVmiUk30vJ8BJ6sFZM0B0HdKEwLw="
-    ];
-  };
-
-
   systemd.user.services.maestral = {
     enable = true;
     after = [ "network.target" ];
