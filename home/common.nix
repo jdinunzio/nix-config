@@ -35,7 +35,6 @@
       fishPlugins.grc
       gh
       gifsicle
-      gnupg
       grc
       imagemagick
       just
@@ -43,8 +42,6 @@
       mmv-go
       nil
       nixVersions.nix_2_28
-      pass
-      pinentry-tty
       rar
       # kitty
       ty
