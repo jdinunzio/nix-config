@@ -3,8 +3,6 @@
   system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false;
 
   environment.systemPackages = with pkgs; [
-    pkgs.vim
-
     # langs
     cargo
     gcc
@@ -75,6 +73,7 @@
     jq
     just
     mmv-go
+    neovim
     pgcli
     pstree
     rar

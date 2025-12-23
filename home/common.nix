@@ -9,6 +9,7 @@
       gcc
       ghc
       python312
+      python312Packages.pip
       # go
       go
       mage
