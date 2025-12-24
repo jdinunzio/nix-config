@@ -5,10 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  networking.hostName = "mcfly";
-  
+  networking.hostName = "falcor";
+
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ../../system/linux.nix
       ../../system/nix.nix
@@ -50,25 +50,16 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
-    xkb.layout = "gb";
-    xkb.variant = "";
+    layout = "us";
+    xkbVariant = "";
   };
 
-  # Configure console keymap
-  console.keyMap = "uk";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Enable sound with pipewire.
-  # sound.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -79,10 +70,8 @@
   };
 
   programs.evince.enable = true;
-
-  programs.fish = {
-    enable = true;
-  };
+  
+  programs.fish.enable = true;
 
   programs.steam = {
     enable = true;
@@ -102,17 +91,8 @@
     proggyfonts
   ];
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  networking.firewall = {
-    allowedTCPPorts = [ 17500 ];
-    allowedUDPPorts = [ 17500 ];
-  };
-
+  services.openssh.enable = true;
+  
   virtualisation.docker.enable = true;
   
   systemd.user.services.maestral = {
@@ -125,6 +105,7 @@
         ExecStart = ''/run/current-system/sw/bin/maestral start'';
     };
   };
+
 
   # Do not change this value. Read `man configuration.nix`
   # or https://nixos.org/nixos/options.html).

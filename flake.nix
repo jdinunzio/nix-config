@@ -27,6 +27,20 @@
       ];
     };
 
+    # falcor: goyo @ nixos + home-manager
+    nixosConfigurations.falcor = nixpkgs.lib.nixosSystem {
+      modules = [
+        ./hosts/falcor
+        ./users/goyo/nixos.nix
+
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.goyo = import ./users/goyo/home-linux.nix;
+        }
+      ];
+    };
+
     # bailey: goyo @ darwin + home-manager
     darwinConfigurations.bailey = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
