@@ -2,8 +2,7 @@
 
   home.packages = with pkgs; [
     gnupg
-    pass
-    passExtensions.pass-otp
+    (pass.withExtensions (exts: [exts.pass-otp]))
     # pinentry-tty
     pinentry-curses
     # pinentry-gnome3
