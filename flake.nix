@@ -22,7 +22,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.goyo = import ./users/goyo/home-linux.nix;
+          home-manager.users.goyo = import ./users/goyo/home-linux-small-screen.nix;
         }
       ];
     };
