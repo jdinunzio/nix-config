@@ -9,6 +9,7 @@
     experimental-features = [ "nix-command" "flakes" ];
     substituters = [
       "https://cache.nixos.org"
+      "https://devenv.cachix.org"
       "https://nixpkgs-python.cachix.org"
     ];
     trusted-public-keys = [

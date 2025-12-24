@@ -1,5 +1,11 @@
 { pkgs, ... }: {
 
+  imports =
+    [
+      ../../system/nix.nix
+      ../../system/nix-extra-options.nix
+    ];
+
   system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false;
 
   environment.systemPackages = with pkgs; [
@@ -99,25 +105,6 @@
     "microsoft-teams"
     # "vscode"
   ];
-
-  nix = {
-    # /etc/nix/nix.conf
-    settings = {
-      experimental-features = "nix-command flakes";
-      trusted-users = [
-        "root"
-        "goyo"
-      ];
-      trusted-public-keys = [
-        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-        "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
-        "nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU="
-      ];
-    };
-    # extraOptions = ''
-    # access-tokens = github.com=ghp_...
-    # '';
-  };
 
   # Enable alternative shell support in nix-darwin.
   programs.fish.enable = true;
