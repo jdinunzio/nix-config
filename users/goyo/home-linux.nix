@@ -36,6 +36,10 @@
     "org.gnome.desktop.wm.keybindings" = {
       switch-group = ["<Super>Above_Tab"];
     };
+    "org.gnome.settings-daemon.plugins.power" = {
+      sleep-inactive-ac-type = "nothing";
+      sleep-inactive-ac-timeout = 0;
+    };
   };
 
   # Let Home Manager install and manage itself (only if `useGlobalPkgs` is false).
