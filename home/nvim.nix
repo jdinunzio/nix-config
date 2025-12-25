@@ -22,10 +22,11 @@ in
       luarocks-nix
       fd
       lazygit
-      # neovim
+      nodejs_24  # required by mason to install plugins
       tree-sitter
       ripgrep
-      vimPlugins.nvim-treesitter
+      vimPlugins.nvim-lspconfig
+      # vimPlugins.nvim-treesitter
   ];
 
   programs.neovim = {
