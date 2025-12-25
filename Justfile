@@ -2,6 +2,10 @@
 @help:
     just --list
 
+#
+#  NixOs targets
+#
+
 # Rebuild the system.
 [group("os"), linux]
 os-rebuild:
@@ -22,10 +26,36 @@ os-update-and-rebuild:
 os-gen-ls:
     nixos-rebuild list-generations
 
+
+#
+#  Nix Darwin targets
+#
+
+# Rebuild the system.
+[group("os"), macos]
+os-rebuild:
+    sudo darwin-rebuild switch --flake ~/.config/nix-config/
+
+
+# List nix darwin generations.
+[group("os"), macos]
+os-gen-ls:
+    sudo darwin-rebuild --list-generations
+
+
+#
+#  OS generic targets, both for NixOS and  Darwin
+#
+
 # Delete specific nixos generations.
-[group("os"), linux]
+[group("os")]
 os-gen-del GENS:
     sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations {{GENS}}
+
+
+#
+#  Nix targets
+#
 
 # Garbage collection.
 [group("nix")]
