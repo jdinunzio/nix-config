@@ -44,6 +44,7 @@
       nil
       nixVersions.nix_2_28
       rar
+      rdfind
       # kitty
       ty
       video-downloader

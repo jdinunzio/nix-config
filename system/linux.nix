@@ -23,6 +23,7 @@
     gnome-tweaks
     gnomeExtensions.freon
     google-chrome
+    kdePackages.kdenlive
     libreoffice
     steam-run
     vlc
