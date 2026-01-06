@@ -1,14 +1,11 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   networking.hostName = "mcfly";
   
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # host specific hardware configuration
       ./hardware-configuration.nix
       ../../system/linux.nix
       ../../system/nix.nix
@@ -18,12 +15,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -62,13 +53,7 @@
   # Configure console keymap
   console.keyMap = "uk";
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Enable sound with pipewire.
-  # sound.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -102,10 +87,9 @@
     proggyfonts
   ];
 
-  # List services that you want to enable:
+  # Services
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   networking.firewall = {
@@ -129,5 +113,4 @@
   # Do not change this value. Read `man configuration.nix`
   # or https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }
