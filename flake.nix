@@ -63,5 +63,27 @@
        ];
     };
 
+    # engywook: jose @ darwin + home-manager
+    darwinConfigurations.engywook = nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      modules = [
+        ./hosts/engywook
+        ./users/jose/darwin.nix
+
+        home-manager.darwinModules.home-manager
+        {
+          nixpkgs = {
+            config = {
+              allowUnfree = true;
+            };
+          };
+          # `home-manager` config
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.jose = import ./users/jose/home-darwin.nix;
+        }
+       ];
+    };
+
   };
 }

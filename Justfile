@@ -47,6 +47,13 @@ os-gen-ls:
 #  OS generic targets, both for NixOS and  Darwin
 #
 
+# Bootstrap
+[group("os")]
+bootstrap:
+    mkdir -p ~/.config/nix-config
+    cd ~/.config/nix-config and git clone https://github.com/jdinunzio/nix-config
+    sudo -i nix run --extra-experimental-features nix-command --extra-experimental-features flakes nix-darwin -- switch --flake ~/.config/nix-config
+
 # Delete specific nixos generations.
 [group("os")]
 os-gen-del GENS:

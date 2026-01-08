@@ -18,11 +18,11 @@
         co2main = "!f() { git co $1 && git rebase main; }; f";
         pushd = "!f() { git comain && git co2main $1 && git push origin $1 ; }; f";
       };
-      credential = {
-         helper = "manager";
-         useHttpPath = true;
-         credentialStore = "osxkeychain";
-      };
+      # credential = {
+      #    helper = "manager";
+      #    useHttpPath = true;
+      #    credentialStore = "osxkeychain";
+      # };
     };
   };
 }
