@@ -6,7 +6,7 @@
 
   imports = [
     ../../home/common.nix
-    # ../../home/darwin.nix
+    ../../home/darwin.nix
     ../../home/direnv.nix
     ../../home/dotfiles.nix
     ../../home/fish.nix

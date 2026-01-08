@@ -6,7 +6,10 @@
       ../../system/nix-extra-options.nix
     ];
 
-  system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false;
+  system.defaults = {
+    NSGlobalDomain."com.apple.swipescrolldirection" = false;
+    dock.autohide = true;
+  };
 
   environment.systemPackages = with pkgs; [
     # langs
