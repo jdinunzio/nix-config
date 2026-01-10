@@ -23,7 +23,7 @@
       maestral  # dropbox replacement
       maestral-gui
       media-downloader
-      speechd
+      # speechd
       typora
   ];
 }
