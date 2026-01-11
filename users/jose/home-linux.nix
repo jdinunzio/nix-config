@@ -23,7 +23,6 @@
   # You should not change this value.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-
   home.language = {
     collate = "C";
   };
@@ -34,7 +33,7 @@
 
   dconf.settings = {
     "org.gnome.desktop.wm.keybindings" = {
-      switch-group = ["<Super>Above_Tab"];
+      switch-group = [ "<Super>Above_Tab" ];
     };
     "org.gnome.settings-daemon.plugins.power" = {
       sleep-inactive-ac-type = "nothing";

@@ -1,7 +1,7 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 
 {
-  
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -15,7 +15,7 @@
   };
 
   virtualisation.docker.enable = true;
-  
+
   security.rtkit.enable = true;
 
   # Set your time zone.
@@ -67,7 +67,7 @@
       workstation = true;
     };
   };
-  
+
   programs.evince.enable = true;
 
   programs.fish = {
@@ -98,8 +98,8 @@
     wantedBy = [ "default.target" ];
     description = "Maestral (free Dropbox)";
     serviceConfig = {
-        Type = "simple";
-        ExecStart = ''/run/current-system/sw/bin/maestral start'';
+      Type = "simple";
+      ExecStart = ''/run/current-system/sw/bin/maestral start'';
     };
   };
 

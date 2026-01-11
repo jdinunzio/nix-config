@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: let
+{ config, pkgs, ... }:
+let
   nvimPath = "${config.home.homeDirectory}/.config/nix-config/home/dotfiles/nvim";
 in
 {
@@ -18,15 +19,15 @@ in
   #     - in case of trouble, `rm -rf ~/.local/{state,share}/nvim`
 
   home.packages = with pkgs; [
-      lua51Packages.lua
-      luarocks-nix
-      fd
-      lazygit
-      nodejs_24  # required by mason to install plugins
-      tree-sitter
-      ripgrep
-      vimPlugins.nvim-lspconfig
-      # vimPlugins.nvim-treesitter
+    lua51Packages.lua
+    luarocks-nix
+    fd
+    lazygit
+    nodejs_24 # required by mason to install plugins
+    tree-sitter
+    ripgrep
+    vimPlugins.nvim-lspconfig
+    # vimPlugins.nvim-treesitter
   ];
 
   programs.neovim = {

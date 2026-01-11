@@ -14,16 +14,15 @@
       df = "grc df -h -x tmpfs $argv";
     };
 
-    interactiveShellInit =
-      ''
-        set -g LESSOPEN "|bat --paging=never --color=always %s"
-        # note: this shouldn't be necessary, since it should be automatically set by
-        # helix.nix.
-        set -g EDITOR "hx"
+    interactiveShellInit = ''
+      set -g LESSOPEN "|bat --paging=never --color=always %s"
+      # note: this shouldn't be necessary, since it should be automatically set by
+      # helix.nix.
+      set -g EDITOR "hx"
 
-        # global abbreviation to pipe help output to bat
-        abbr -a --position anywhere -- --help '--help | bat -plhelp'
-      '';
+      # global abbreviation to pipe help output to bat
+      abbr -a --position anywhere -- --help '--help | bat -plhelp'
+    '';
   };
 
   home.file = {

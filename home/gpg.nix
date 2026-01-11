@@ -1,13 +1,14 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [
     gnupg
-    (pass.withExtensions (exts: [exts.pass-otp]))
+    (pass.withExtensions (exts: [ exts.pass-otp ]))
     # pinentry-tty
     pinentry-curses
     # pinentry-gnome3
     # pinentry-dmenu
-    zbar  # Bar code reader, helps registering otp
+    zbar # Bar code reader, helps registering otp
   ];
 
   programs.gpg = {

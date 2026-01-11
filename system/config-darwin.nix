@@ -7,7 +7,6 @@
     dock.autohide = true;
   };
 
-
   homebrew = {
     enable = true;
     global.autoUpdate = false;
@@ -17,7 +16,7 @@
     };
 
     # command-line tools from homebrew
-    brews = [];
+    brews = [ ];
 
     # brew casks, see https://formulae.brew.sh/cask/
     casks = [
@@ -28,7 +27,7 @@
     ];
 
     # Mac Apple Store
-    masApps = {};
+    masApps = { };
   };
 
   # Enable alternative shell support in nix-darwin.

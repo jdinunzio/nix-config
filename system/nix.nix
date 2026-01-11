@@ -5,8 +5,14 @@
   nixpkgs.config.allowUnfree = true;
 
   nix.settings = {
-    trusted-users = [ "root" "goyo"];
-    experimental-features = [ "nix-command" "flakes" ];
+    trusted-users = [
+      "root"
+      "goyo"
+    ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     substituters = [
       "https://cache.nixos.org"
       "https://devenv.cachix.org"

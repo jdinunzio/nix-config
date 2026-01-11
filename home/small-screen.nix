@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   # scale text down
   dconf.settings = {
     "org/gnome/desktop/interface" = {
