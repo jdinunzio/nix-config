@@ -8,8 +8,8 @@
       cargo
       gcc
       ghc
-      python312
-      python312Packages.pip
+      python313
+      python313Packages.pip
       # go
       go
       mage
@@ -75,8 +75,7 @@
       just-lsp
       jq-lsp
       python313Packages.jedi-language-server
-      python312Packages.pip
-      python312Packages.python-lsp-server
+      python313Packages.python-lsp-server
       taplo
       temurin-jre-bin-21
       tombi

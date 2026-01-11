@@ -1,5 +1,6 @@
-{ pkgs, ...}: {
+{ pkgs, ...}:
 
+{
   
   environment.systemPackages = with pkgs; [
     # langs
@@ -7,10 +8,10 @@
     gcc
     ghc
     #python313Full
-    python312
+    python313
     python313Packages.jedi-language-server
-    python312Packages.python-lsp-server
-    python312Packages.pip
+    python313Packages.python-lsp-server
+    python313Packages.pip
     temurin-jre-bin-21
     # go
     #bazel
