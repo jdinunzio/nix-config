@@ -60,7 +60,7 @@
       helix
       jetbrains.idea-community
       #jetbrains.goland
-      jetbrains.pycharm-community-bin
+      # jetbrains.pycharm-community-bin
       mpv
       #steam
 
