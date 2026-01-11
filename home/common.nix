@@ -42,6 +42,7 @@
     jq
     mmv-go
     nil
+    nixfmt
     nixVersions.nix_2_28
     rar
     rdfind
