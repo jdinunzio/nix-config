@@ -4,7 +4,7 @@
     [
       ../../system/nix.nix
       ../../system/nix-extra-options.nix
-      ../../system/darwin.nix
+      ../../system/packages-darwin.nix
     ];
 
   system.defaults = {
