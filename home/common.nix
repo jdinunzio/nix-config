@@ -58,9 +58,9 @@
       comical
       firefox
       helix
-      jetbrains.idea-community
+      # jetbrains.idea-community
       #jetbrains.goland
-      # jetbrains.pycharm-community-bin
+      jetbrains.pycharm
       mpv
       #steam
 
