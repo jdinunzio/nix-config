@@ -92,7 +92,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.jose = import ./users/jose/home-darwin.nix;
         }
-       
+
         nix-homebrew.darwinModules.nix-homebrew
         {
           nix-homebrew = {
