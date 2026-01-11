@@ -5,13 +5,14 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, nix-darwin, home-manager, ... }: {
+  outputs = { nixpkgs, nix-darwin, home-manager, nix-homebrew, ... }: {
 
     # mcfly: goyo @ nixos + home-manager
     nixosConfigurations.mcfly = nixpkgs.lib.nixosSystem {
@@ -60,7 +61,16 @@
           home-manager.useUserPackages = true;
           home-manager.users.goyo = import ./users/goyo/home-darwin.nix;
         }
-       ];
+
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            enable = true;
+            user = "goyo";
+            enableRosetta = true;
+          };
+        }
+      ];
     };
 
     # engywook: jose @ darwin + home-manager
@@ -82,7 +92,16 @@
           home-manager.useUserPackages = true;
           home-manager.users.jose = import ./users/jose/home-darwin.nix;
         }
-       ];
+       
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            enable = true;
+            user = "jose";
+            enableRosetta = true;
+          };
+        }
+      ];
     };
 
   };

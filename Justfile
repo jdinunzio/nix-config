@@ -11,11 +11,6 @@
 os-rebuild:
     sudo nixos-rebuild switch --flake ~/.config/nix-config/
 
-# Update the system.
-[group("os"), linux]
-os-update:
-    nix flake update
-
 # Update and rebuild the system.
 [group("os"), linux]
 os-update-and-rebuild:
@@ -59,6 +54,11 @@ bootstrap:
 os-gen-del GENS:
     sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations {{GENS}}
 
+
+# Update the system.
+[group("os"), linux, macos]
+os-update:
+    nix flake update
 
 #
 #  Nix targets

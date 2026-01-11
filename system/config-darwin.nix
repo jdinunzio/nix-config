@@ -1,17 +1,33 @@
 { ... }: {
-  
+
   system.defaults = {
     NSGlobalDomain."com.apple.swipescrolldirection" = false;
     dock.autohide = true;
   };
 
 
-  homebrew.casks = [
-    "alt-tab"
-    "firefox"
-    "microsoft-teams"
-    # "vscode"
-  ];
+  homebrew = {
+    enable = true;
+    global.autoUpdate = false;
+    onActivation = {
+      autoUpdate = false;
+      cleanup = "none";
+    };
+
+    # command-line tools from homebrew
+    brews = [];
+
+    # brew casks, see https://formulae.brew.sh/cask/
+    casks = [
+      "alt-tab"
+      "firefox"
+      "microsoft-teams"
+      # "vscode"
+    ];
+
+    # Mac Apple Store
+    masApps = {};
+  };
 
   # Enable alternative shell support in nix-darwin.
   programs.fish.enable = true;
