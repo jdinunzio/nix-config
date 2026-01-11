@@ -13,6 +13,7 @@
       below
       encfs
       lm_sensors
+      sshfs
       vdhcoapp
       xsensors
 
