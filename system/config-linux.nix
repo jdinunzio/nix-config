@@ -60,10 +60,12 @@
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
+    allowInterfaces = [ "wlp64s0" ];
     publish = {
       enable = true;
       addresses = true;
       domain = true;
+      userServices = true;
       workstation = true;
     };
   };
