@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
-  users.users.goyo = {
+  users.users.${username} = {
     isNormalUser = true;
-    description = "goyo";
+    description = username;
     extraGroups = [
       "networkmanager"
       "wheel"

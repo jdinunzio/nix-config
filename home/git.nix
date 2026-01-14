@@ -1,9 +1,10 @@
+{ username, email, ... }:
 {
   programs.git = {
     enable = true;
     settings = {
-      user.name = "jose";
-      user.email = "jose.dinuncio@gmail.com";
+      user.name = username;
+      user.email = email;
       init.defaultBranch = "main";
       alias = {
         br = "branch";

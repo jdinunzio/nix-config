@@ -1,9 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, username, homeDirectory, ... }:
 {
-  users.knownUsers = [ "goyo" ];
-  users.users.goyo.uid = 501;
-  users.users.goyo.home = "/Users/goyo";
-  users.users.goyo.shell = pkgs.fish;
+  users.knownUsers = [ username ];
+  users.users.${username} = {
+    uid = 501;
+    home = homeDirectory;
+    shell = pkgs.fish;
+  };
 
-  system.primaryUser = "goyo";
+  system.primaryUser = username;
 }

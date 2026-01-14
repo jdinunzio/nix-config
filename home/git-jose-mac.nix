@@ -1,10 +1,11 @@
+{ username, email, ... }:
 {
   programs.git = {
     enable = true;
 
     settings = {
-      user.name = "josedinunzio";
-      user.email = "josedinunzio@microsoft.com";
+      user.name = username;
+      user.email = email;
       init.defaultBranch = "main";
       http.version = "HTTP/1.1";
       http.postBuffer = 1048576000;

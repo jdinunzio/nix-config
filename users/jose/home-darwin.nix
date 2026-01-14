@@ -1,8 +1,8 @@
-{ ... }:
+{ username, homeDirectory, ... }:
 
 {
-  home.username = "jose";
-  home.homeDirectory = "/Users/jose";
+  home.username = username;
+  home.homeDirectory = homeDirectory;
 
   imports = [
     ../../home/common.nix
