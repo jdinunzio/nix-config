@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
   # Allow unfree packages
@@ -7,7 +7,7 @@
   nix.settings = {
     trusted-users = [
       "root"
-      "goyo"
+      username
     ];
     experimental-features = [
       "nix-command"
