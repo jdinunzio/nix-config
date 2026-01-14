@@ -10,7 +10,7 @@
     ../../home/direnv.nix
     ../../home/dotfiles.nix
     ../../home/fish.nix
-    ../../home/git-jose-mac.nix
+    ../../home/git.nix
     ../../home/gpg.nix
     ../../home/helix.nix
     ../../home/kitty.nix
