@@ -6,7 +6,8 @@
 
   imports = [
     ./home-linux.nix
-    ../../home/small-screen.nix
+    # gnome.nix is already imported by home-linux.nix
+    # textScalingFactor is controlled via flake.nix hostConfigs
   ];
 
 }

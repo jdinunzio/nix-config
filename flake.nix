@@ -28,12 +28,18 @@
           email = "jose.dinuncio@gmail.com";
           homeDirectory = "/home/goyo";
           system = "x86_64-linux";
+          gnome = {
+            textScalingFactor = 1.0;
+          };
         };
         falcor = {
           username = "goyo";
           email = "jose.dinuncio@gmail.com";
           homeDirectory = "/home/goyo";
           system = "x86_64-linux";
+          gnome = {
+            textScalingFactor = 0.85; # Small screen, show more text
+          };
         };
         bailey = {
           username = "goyo";
@@ -80,7 +86,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = hostConfigs.falcor;
-            home-manager.users.goyo = import ./users/goyo/home-linux-small-screen.nix;
+            home-manager.users.goyo = import ./users/goyo/home-linux.nix;
           }
         ];
       };
@@ -100,7 +106,6 @@
                 allowUnfree = true;
               };
             };
-            # `home-manager` config
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = hostConfigs.bailey;
@@ -133,7 +138,6 @@
                 allowUnfree = true;
               };
             };
-            # `home-manager` config
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = hostConfigs.engywook;
