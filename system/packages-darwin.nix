@@ -1,95 +1,38 @@
 { pkgs, ... }:
 
 {
+  # System-level packages for macOS
+  # User packages (languages, dev tools, LSPs, CLI tools) are in home/common.nix
 
   environment.systemPackages = with pkgs; [
-    # langs
-    cargo
-    gcc
-    ghc
-    #python313Full
-    python313
-    python313Packages.jedi-language-server
-    python313Packages.python-lsp-server
-    python313Packages.pip
-    temurin-jre-bin-21
-    # go
-    #bazel
-    #bazelisk
-    go
-    mage
-    # nodejs_23
-    protobuf
-    protoc-gen-go
-    grpcui
-
-    # lsp
-    docker-language-server
-    docker-compose-language-service
-    fish-lsp
-    just-lsp
-    jq-lsp
-    taplo
-    tombi
-    superhtml
-    vscode-langservers-extracted
-    yaml-language-server
-
-    # devel
+    # Cloud CLIs & deployment tools
     awscli2
     azure-cli
     azure-cli-extensions.account
     circleci-cli
     copilot-cli
-    coreutils
-    devbox
-    devenv
-    docker
-    docker-compose
-    git
-    git-credential-manager
-    # google-cloud-sdk-gce
-    gnumake42
-    httpie
-    k3d
-    kind
-    krew
-    ruff
-    #terraform
-    #terragrunt
     ssm-session-manager-plugin
 
-    # cli
-    ack
-    bat
-    fzf
-    fishPlugins.grc
-    gifsicle
-    gh
+    # Core system utilities
+    coreutils
     gnugrep
     gnused
-    grc
-    helix
-    jq
-    just
-    mmv-go
+
+    # Docker & container tools
+    docker
+    docker-compose
+
+    # Git & credentials
+    git
+    git-credential-manager
+
+    # System-level CLI tools
     neovim
     pgcli
     pstree
-    rar
-    yq
 
-    just
+    # Terminal emulators (system-wide)
     kitty
-    nil
-    ty
-    yazi
-
-    # apps
     iterm2
-
-    # libs
-    libwebp
-    zlib
   ];
 }
