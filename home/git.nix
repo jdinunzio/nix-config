@@ -1,9 +1,16 @@
-{ username, email, ... }:
+{
+  username,
+  email,
+  git ? {
+    userName = username;
+  },
+  ...
+}:
 {
   programs.git = {
     enable = true;
     settings = {
-      user.name = username;
+      user.name = git.userName;
       user.email = email;
       init.defaultBranch = "main";
       http.version = "HTTP/1.1";

@@ -1,4 +1,9 @@
-{ gnome ? { textScalingFactor = 1.0; }, ... }:
+{
+  gnome ? {
+    textScalingFactor = 1.0;
+  },
+  ...
+}:
 {
   # GNOME desktop configuration
   dconf.settings = {

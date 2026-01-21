@@ -21,7 +21,6 @@ os-update-and-rebuild:
 os-gen-ls:
     nixos-rebuild list-generations
 
-
 #
 #  Nix Darwin targets
 #

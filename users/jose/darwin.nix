@@ -1,4 +1,9 @@
-{ pkgs, username, homeDirectory, ... }:
+{
+  pkgs,
+  username,
+  homeDirectory,
+  ...
+}:
 {
   users.knownUsers = [ username ];
   users.users.${username} = {

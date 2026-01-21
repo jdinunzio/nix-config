@@ -1,13 +1,14 @@
 { pkgs, ... }:
 
 {
+  # Core Linux system configuration
+  # Can be applied to NixOS both in and out of WSL
+  # For physical hardware networking (NetworkManager), see config-linux-net.nix
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Enable networking
-  networking.networkmanager.enable = true;
   # Open ports in the firewall.
   networking.firewall = {
     allowedTCPPorts = [ 17500 ];

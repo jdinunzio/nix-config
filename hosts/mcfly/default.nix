@@ -9,6 +9,7 @@
     ../../system/nix.nix
     ../../system/nix-extra-options.nix
     ../../system/config-linux.nix
+    ../../system/config-linux-net.nix
     ../../system/packages-linux.nix
   ];
 
