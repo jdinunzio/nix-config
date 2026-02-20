@@ -29,6 +29,7 @@
     # cli
     ack
     bat
+    claude-code
     devbox
     devenv
     ffmpeg
