@@ -87,11 +87,23 @@
     };
   };
 
-  programs.evince.enable = true;
+  #
+  # Programs
+  #
 
   programs.fish = {
     enable = true;
   };
+
+
+  # ssh config to remember passphrases (in console, alternative to gnome config)
+  #programs.ssh = {
+  #  startAgent = true;
+  #  agentTimeout = "20m";
+  #  extraConfig = ''
+  #  AddKeysToAgent yes
+  #  '';
+  #};
 
   programs.steam = {
     enable = true;
@@ -99,6 +111,12 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
+
+  programs.evince.enable = true;
+
+  #
+  # Other config
+  # 
 
   fonts.packages = with pkgs; [
     noto-fonts
