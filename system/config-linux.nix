@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   # Core Linux system configuration
@@ -115,8 +115,23 @@
   programs.evince.enable = true;
 
   #
+  # systemd
+  #
+
+  systemd.user.services.maestral = {
+    enable = true;
+    after = [ "network.target" ];
+    wantedBy = [ "default.target" ];
+    description = "Maestral (free Dropbox)";
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = ''/run/current-system/sw/bin/maestral start'';
+    };
+  };
+
+  #
   # Other config
-  # 
+  #
 
   fonts.packages = with pkgs; [
     noto-fonts
@@ -130,16 +145,6 @@
     proggyfonts
   ];
 
-  systemd.user.services.maestral = {
-    enable = true;
-    after = [ "network.target" ];
-    wantedBy = [ "default.target" ];
-    description = "Maestral (free Dropbox)";
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = ''/run/current-system/sw/bin/maestral start'';
-    };
-  };
 
   # Do not change this value. Read `man configuration.nix`
   # or https://nixos.org/nixos/options.html).

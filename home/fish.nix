@@ -17,7 +17,7 @@
 
     shellInit = ''
       # set (add) user paths to $PATH
-      set -x fish_user_paths  ${config.home.homeDirectory}/bin ${config.home.homeDirectory}/.local/bin
+      set -x fish_user_paths  ${config.home.homeDirectory}/.local/bin ${config.home.homeDirectory}/bin
 
       # Set SSH_AUTH_SOCK for GCR SSH agent (GNOME Keyring v46+)
       set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
