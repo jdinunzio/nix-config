@@ -10,5 +10,8 @@
     "org/gnome/desktop/interface" = {
       text-scaling-factor = gnome.textScalingFactor;
     };
+    "org/gnome/desktop/notifications/application/kitty" = {
+      enable = false;
+    };
   };
 }
