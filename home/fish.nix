@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   programs.fish = {
     enable = true;
@@ -13,6 +14,10 @@
       ls = "ls --indicator-style=classify --group-directories-first --color";
       df = "grc df -h -x tmpfs $argv";
     };
+
+    shellInit = ''
+      set -x fish_user_paths  ${config.home.homeDirectory}/bin ${config.home.homeDirectory}/.local/bin
+    '';
 
     interactiveShellInit = ''
       set -g LESSOPEN "|bat --paging=never --color=always %s"
