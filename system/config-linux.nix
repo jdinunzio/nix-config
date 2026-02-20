@@ -71,6 +71,22 @@
     };
   };
 
+  security = {
+    sudo = {
+      enable = true;
+      extraConfig = ''
+      # Timeout (mins) for remembering password
+      Defaults        timestamp_timeout=20
+
+      # Allow password to be used across all terminals (not just the current one)
+      Defaults timestamp_type = global
+
+      # Optional: Apply these defaults to all users
+      Defaults env_reset
+      '';
+    };
+  };
+
   programs.evince.enable = true;
 
   programs.fish = {

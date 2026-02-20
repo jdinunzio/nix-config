@@ -5,6 +5,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # console apps
+    sudo
     dropbox-cli
     fish
     fishPlugins.grc
