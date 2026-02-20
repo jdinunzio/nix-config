@@ -17,6 +17,7 @@
     xsensors
 
     # apps
+    cobang # graphical qr code reader
     dropbox
     gnomeExtensions.system-monitor
     libreoffice-fresh
