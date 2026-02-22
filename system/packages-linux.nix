@@ -49,6 +49,7 @@
     tmux
     tree
     unzip
+    uv
     webex
     wget
     yq

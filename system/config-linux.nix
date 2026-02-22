@@ -95,6 +95,8 @@
     enable = true;
   };
 
+  # enable dynamic links
+  programs.nix-ld.enable = true;
 
   # ssh config to remember passphrases (in console, alternative to gnome config)
   #programs.ssh = {
