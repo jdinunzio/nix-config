@@ -58,5 +58,6 @@
 
     # libs
     openssl
+    stdenv.cc.cc.lib
   ];
 }
