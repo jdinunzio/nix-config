@@ -13,6 +13,7 @@
     ../../system/nix.nix
     ../../system/nix-extra-options.nix
     # ../../system/config-linux.nix
+    ../../system/fonts.nix
     ../../system/packages-linux.nix
   ];
 
