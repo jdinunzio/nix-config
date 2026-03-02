@@ -11,6 +11,8 @@
     # cli
     below
     encfs
+    libgbm
+    libsecret
     lm_sensors
     sshfs
     vdhcoapp
@@ -19,6 +21,7 @@
     # apps
     cobang # graphical qr code reader
     dropbox
+    gnome-keyring
     gnomeExtensions.system-monitor
     libreoffice-fresh
     maestral # dropbox replacement
