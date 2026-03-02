@@ -28,6 +28,7 @@
 
     # cli
     ack
+    azure-cli
     bat
     claude-code
     devbox
@@ -57,6 +58,7 @@
 
     # apps
     brave
+    chromium
     comical
     firefox
     helix
