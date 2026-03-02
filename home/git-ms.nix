@@ -10,7 +10,6 @@
 {
   programs.git = {
     enable = true;
-    package = pkgs.gitSVN;
     settings = {
       user.name = git.userName;
       user.email = email;
