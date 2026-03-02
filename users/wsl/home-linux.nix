@@ -14,6 +14,7 @@
     ../../home/gpg.nix
     ../../home/helix.nix
     ../../home/kitty.nix
+    ../../home/kitty-wsl.nix
     ../../home/nvim.nix
     ../../home/shell.nix
     ../../home/ssh.nix
