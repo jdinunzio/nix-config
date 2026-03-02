@@ -43,9 +43,17 @@
     };
 
     settings = {
-      # show default window decoration
-      linux_display_server = "x11";
+      # Use Wayland with automatic fallback to X11 for better WSLg compatibility
+      linux_display_server = "auto";
       enable_audio_bell = false;
+
+      # Performance optimizations for WSL
+      sync_to_monitor = true;
+      repaint_delay = 10;
+      input_delay = 3;
+
+      # Fix mouse cursor issues - disable blinking to prevent disappearing
+      cursor_blink_interval = 0;
 
       # tab bar
       tab_bar_style = "powerline";
