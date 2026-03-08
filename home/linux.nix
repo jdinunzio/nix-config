@@ -15,7 +15,6 @@
     libsecret
     lm_sensors
     sshfs
-    vdhcoapp
     xsensors
 
     # apps
