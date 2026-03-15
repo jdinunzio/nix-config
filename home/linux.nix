@@ -22,6 +22,7 @@
     dropbox
     gnome-keyring
     gnomeExtensions.system-monitor
+    kdePackages.gwenview  # gif viewer
     libreoffice-fresh
     maestral # dropbox replacement
     maestral-gui
