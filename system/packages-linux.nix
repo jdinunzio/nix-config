@@ -28,7 +28,7 @@
     libreoffice
     steam-run
     vlc
-    xorg.xkill
+    xkill
     zoom-us
 
     # cli tools
