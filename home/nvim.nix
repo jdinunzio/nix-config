@@ -34,6 +34,8 @@ in
     enable = true;
     viAlias = true;
     vimAlias = true;
+    withPython3 = true;
+    withRuby = true;
   };
 
   xdg.configFile.nvim.source = config.lib.file.mkOutOfStoreSymlink nvimPath;

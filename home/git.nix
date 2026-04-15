@@ -9,6 +9,7 @@
 {
   programs.git = {
     enable = true;
+    signing.format = "opengpg";
     settings = {
       user.name = git.userName;
       user.email = email;
