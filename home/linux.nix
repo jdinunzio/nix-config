@@ -9,6 +9,7 @@
     bazelisk
 
     # cli
+    piper-tts # text-to-voice
     below
     encfs
     libgbm
@@ -18,6 +19,7 @@
     xsensors
 
     # apps
+    chromium
     cobang # graphical qr code reader
     dropbox
     gnome-keyring

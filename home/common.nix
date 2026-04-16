@@ -47,7 +47,6 @@
     nixfmt
     nixVersions.nix_2_28
     pandoc
-    piper-tts # text-to-voice
     rar
     rdfind
     # kitty
@@ -60,7 +59,6 @@
 
     # apps
     brave
-    chromium
     comical
     firefox
     helix
