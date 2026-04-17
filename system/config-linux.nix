@@ -46,6 +46,10 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  # Use GTK portal backend for file chooser to avoid ~1s save dialog latency
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.config.common."org.freedesktop.impl.portal.FileChooser" = "gtk";
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   services.pipewire = {
