@@ -9,12 +9,15 @@
     bazelisk
 
     # cli
-    piper-tts # text-to-voice
     below
+    busybox  # for fuser
     encfs
     libgbm
     libsecret
     lm_sensors
+    lsof
+    ntfs3g
+    piper-tts # text-to-voice
     sshfs
     xsensors
 
