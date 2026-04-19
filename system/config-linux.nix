@@ -127,6 +127,28 @@
   # systemd
   #
 
+  services.keyd = {
+    enable = true;
+    keyboards.default = {
+      ids = [ "*" ];
+      settings = {
+        main = {
+          meta = "overload(mac, meta)";
+        };
+        mac = {
+          left  = "C-a";
+          right = "C-e";
+          up    = "C-home";
+          down  = "C-end";
+          c = "C-c";  v = "C-v";  x = "C-x";
+          z = "C-z";  a = "C-a";  s = "C-s";
+          f = "C-f";  t = "C-t";  w = "C-w";
+          n = "C-n";  q = "C-q";
+        };
+      };
+    };
+  };
+
   systemd.user.services.maestral = {
     enable = true;
     after = [ "network.target" ];
