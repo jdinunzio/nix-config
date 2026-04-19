@@ -27,11 +27,13 @@
     dropbox
     gnome-keyring
     gnomeExtensions.system-monitor
+    hdparm
     kdePackages.gwenview  # gif viewer
     libreoffice-fresh
     maestral # dropbox replacement
     maestral-gui
     media-downloader
+    smartmontools
     # speechd
     typora
   ];
