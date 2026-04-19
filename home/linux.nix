@@ -33,6 +33,7 @@
     maestral # dropbox replacement
     maestral-gui
     media-downloader
+    ntfs3g
     smartmontools
     # speechd
     typora
