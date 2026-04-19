@@ -5,19 +5,22 @@
 
   home.packages = with pkgs; [
     # langs
-    bazel
-    bazelisk
+    #bazel
+    #bazelisk
 
     # cli
     below
-    # busybox  # for fuser
+    # busybox  # for fuser, but overides other tools
     encfs
+    hdparm
     libgbm
     libsecret
     lm_sensors
     lsof
-    ntfs3g
+    #ntfs3g
+    ntfsprogs-plus
     piper-tts # text-to-voice
+    smartmontools
     sshfs
     xsensors
 
@@ -27,14 +30,11 @@
     dropbox
     gnome-keyring
     gnomeExtensions.system-monitor
-    hdparm
     kdePackages.gwenview  # gif viewer
     libreoffice-fresh
     maestral # dropbox replacement
     maestral-gui
     media-downloader
-    ntfs3g
-    smartmontools
     # speechd
     typora
   ];
