@@ -30,6 +30,8 @@
     ack
     azure-cli
     bat
+    taskwarrior3
+    vit
     claude-code
     devbox
     devenv
