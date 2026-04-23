@@ -30,8 +30,6 @@
     ack
     azure-cli
     bat
-    taskwarrior3
-    vit
     claude-code
     devbox
     devenv
@@ -58,6 +56,13 @@
     yazi
     yq
     yt-dlp
+
+    # task warrior
+    taskwarrior3
+    python313Packages.bugwarrior
+    taskopen
+    #syncall
+    vit
 
     # apps
     brave
