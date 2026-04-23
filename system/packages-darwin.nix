@@ -24,7 +24,6 @@
 
     # Git & credentials
     git
-    git-credential-manager
 
     # System-level CLI tools
     neovim

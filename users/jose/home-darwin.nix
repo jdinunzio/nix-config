@@ -11,6 +11,7 @@
     ../../home/dotfiles.nix
     ../../home/fish.nix
     ../../home/git.nix
+    ../../home/git-credential-manager.nix
     ../../home/gpg.nix
     ../../home/helix.nix
     ../../home/kitty.nix

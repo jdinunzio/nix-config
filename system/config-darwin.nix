@@ -2,6 +2,11 @@
 
 {
 
+  security.sudo.extraConfig = ''
+    Defaults timestamp_timeout=60
+    Defaults timestamp_type=global
+  '';
+
   system.defaults = {
     NSGlobalDomain."com.apple.swipescrolldirection" = false;
     dock.autohide = true;
