@@ -18,7 +18,8 @@
     ../../home/nvim.nix
     ../../home/shell.nix
     ../../home/ssh.nix
-    ../../home/vscode.nix
+    # this piece of garbage isn't fit for purpose
+    # ../../home/vscode.nix
   ];
 
   # You should not change this value.
