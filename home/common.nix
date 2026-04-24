@@ -60,7 +60,7 @@
     # task warrior
     taskwarrior3
     python313Packages.bugwarrior
-    taskopen
+    #taskopen
     #syncall
     vit
 

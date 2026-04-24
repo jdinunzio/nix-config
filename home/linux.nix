@@ -23,6 +23,9 @@
     smartmontools
     sshfs
     xsensors
+    
+    # task warrior
+    taskopen
 
     # apps
     chromium
