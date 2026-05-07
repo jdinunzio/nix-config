@@ -166,7 +166,12 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = hostConfigs.engywook;
-            home-manager.users.jose = import ./users/jose/home-darwin.nix;
+            home-manager.users.jose = {
+              imports = [
+                ./users/jose/home-darwin.nix
+                ./hosts/engywook/home.nix
+              ];
+            };
           }
 
           nix-homebrew.darwinModules.nix-homebrew
