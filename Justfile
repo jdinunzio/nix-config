@@ -14,7 +14,13 @@ os-rebuild:
 # Update and rebuild the system.
 [group("os"), linux]
 os-update-and-rebuild:
-    sudo nixos-rebuild switch --recreate-lock-file --flake ~/.config/nix-config/
+    nix flake update --flake ~/.config/nix-config/
+    sudo nixos-rebuild switch --flake ~/.config/nix-config/
+
+# Rebuild the boot menu without activating (applies on next reboot).
+[group("os"), linux]
+os-rebuild-boot:
+    sudo nixos-rebuild boot --flake ~/.config/nix-config/
 
 # List nixos generations.
 [group("os"), linux]
@@ -44,8 +50,7 @@ os-gen-ls:
 # Bootstrap
 [group("os")]
 bootstrap:
-    mkdir -p ~/.config/nix-config
-    cd ~/.config/nix-config and git clone https://github.com/jdinunzio/nix-config
+    git clone https://github.com/jdinunzio/nix-config ~/.config/nix-config
     sudo -i nix run --extra-experimental-features nix-command --extra-experimental-features flakes nix-darwin -- switch --flake ~/.config/nix-config
 
 # Delete specific nixos generations.
