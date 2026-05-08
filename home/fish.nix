@@ -13,6 +13,8 @@
       # so we define it here, since shellAliases has priority.
       ls = "ls --indicator-style=classify --group-directories-first --color";
       df = "grc df -h -x tmpfs $argv";
+      vi = "nvim";
+      vim = "nvim";
     };
 
     shellInit = ''
