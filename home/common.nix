@@ -50,6 +50,7 @@
     rar
     rdfind
     # kitty
+    tldr
     ty
     video-downloader
     wmctrl
