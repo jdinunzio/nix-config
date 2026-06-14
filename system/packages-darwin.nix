@@ -10,7 +10,7 @@
     azure-cli
     azure-cli-extensions.account
     circleci-cli
-    copilot-cli
+    # copilot-cli
     ssm-session-manager-plugin
 
     # Core system utilities
