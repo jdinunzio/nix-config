@@ -52,7 +52,7 @@
     # kitty
     tldr
     ty
-    video-downloader
+    # video-downloader
     wmctrl
     yazi
     yq

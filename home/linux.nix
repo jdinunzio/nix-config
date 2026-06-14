@@ -22,6 +22,7 @@
     piper-tts # text-to-voice
     smartmontools
     sshfs
+    video-downloader
     xsensors
     
     # task warrior
