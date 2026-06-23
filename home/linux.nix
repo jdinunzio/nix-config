@@ -11,7 +11,8 @@
     # cli
     below
     # busybox  # for fuser, but overides other tools
-    encfs
+    #encfs
+    gocryptfs
     hdparm
     libgbm
     libsecret

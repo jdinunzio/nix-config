@@ -37,7 +37,6 @@
     btop
     curl
     docker
-    encfs
     file
     git
     grc
