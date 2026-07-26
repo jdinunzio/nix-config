@@ -28,6 +28,7 @@
     
     # task warrior
     taskopen
+    taskwarrior-tui
 
     # apps
     chromium

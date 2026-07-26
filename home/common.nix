@@ -48,6 +48,7 @@
     nixVersions.nix_2_28
     pandoc
     rar
+    rename
     rdfind
     # kitty
     tldr
@@ -69,6 +70,7 @@
     brave
     comical
     firefox
+    gpxsee
     helix
     # jetbrains.idea-community
     #jetbrains.goland
