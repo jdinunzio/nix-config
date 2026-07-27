@@ -27,3 +27,7 @@
 #--map-syntax "*.ino:C++"
 #--map-syntax ".ignore:Git Ignore"
 --map-syntax='*.conf:INI'
+
+# Justfiles
+--map-syntax Justfile:Makefile
+--map-syntax justfile:Makefile
