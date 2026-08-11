@@ -35,6 +35,7 @@
     dropbox
     gnome-keyring
     gnomeExtensions.system-monitor
+    inotify-tools
     kdePackages.gwenview  # gif viewer
     libreoffice-fresh
     maestral # dropbox replacement
