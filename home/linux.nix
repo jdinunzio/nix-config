@@ -12,6 +12,7 @@
     below
     # busybox  # for fuser, but overides other tools
     #encfs
+    git-credential-oauth
     gocryptfs
     hdparm
     libgbm
