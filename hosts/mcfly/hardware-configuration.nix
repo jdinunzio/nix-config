@@ -22,6 +22,8 @@
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
+  # attempt to solve flickery on entroware screen
+  boot.kernelParams = [ "i915.enable_psr=0" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
