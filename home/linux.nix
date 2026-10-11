@@ -38,7 +38,7 @@
     gnomeExtensions.system-monitor
     inotify-tools
     kdePackages.gwenview  # gif viewer
-    libreoffice-fresh
+    libreoffice-stable
     maestral # dropbox replacement
     maestral-gui
     media-downloader

@@ -11,6 +11,7 @@
     ../../system/config-linux.nix
     ../../system/config-linux-net.nix
     ../../system/packages-linux.nix
+    ../../system/fonts.nix
   ];
 
   # Configure keymap in X11
