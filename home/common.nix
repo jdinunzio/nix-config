@@ -40,6 +40,7 @@
     gifsicle
     grc
     imagemagick
+    inkscape
     just
     jq
     mmv-go
@@ -53,8 +54,7 @@
     # kitty
     tldr
     ty
-    # video-downloader
-    wmctrl
+    wmctrl    # video-downloader
     yazi
     yq
     yt-dlp
