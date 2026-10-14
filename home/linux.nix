@@ -10,6 +10,7 @@
 
     # cli
     below
+    dotool  # keyboard+mouse macro
     # busybox  # for fuser, but overides other tools
     #encfs
     git-credential-oauth
@@ -44,5 +45,6 @@
     media-downloader
     # speechd
     typora
+    synfigstudio
   ];
 }
