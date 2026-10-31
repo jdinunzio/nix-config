@@ -46,7 +46,7 @@
     mmv-go
     nil
     nixfmt
-    nixVersions.nix_2_31
+    nixVersions.nix_2_34
     pandoc
     rar
     rename
