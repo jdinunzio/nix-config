@@ -29,7 +29,7 @@
     xsensors
     
     # task warrior
-    taskopen
+    # taskopen (nix refuses to compile)
 
     # apps
     chromium

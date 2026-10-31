@@ -63,7 +63,6 @@
     taskwarrior3
     taskwarrior-tui
     python313Packages.bugwarrior
-    #taskopen
     #syncall
     vit
 
