@@ -46,5 +46,11 @@
     # speechd
     typora
     synfigstudio
+
+    # steam-run to allow running downloaded binaries
+    # use: steam-run the-dynamic-linked-app
+    (steam.override {
+      extraPkgs = p: [ p.gtk3 ];
+    }).run
   ];
 }
