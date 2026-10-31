@@ -28,7 +28,7 @@
 
     # cli
     ack
-    azure-cli
+    #azure-cli
     bat
     claude-code
     devbox

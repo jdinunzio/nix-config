@@ -7,8 +7,8 @@
   environment.systemPackages = with pkgs; [
     # Cloud CLIs & deployment tools
     awscli2
-    azure-cli
-    azure-cli-extensions.account
+    #azure-cli
+    #azure-cli-extensions.account
     circleci-cli
     # copilot-cli
     ssm-session-manager-plugin
