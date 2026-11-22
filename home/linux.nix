@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  imports = [ ./yazi.nix ];
+
   # linux-specific packages
 
   home.packages = with pkgs; [

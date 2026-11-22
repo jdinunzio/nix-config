@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+archive=$(realpath -- "${1:?Usage: zip-geeqie ARCHIVE}")
+mnt=$(mktemp -d /tmp/zip-geeqie.XXXXXX)
+mounted=0
+
+cleanup() {
+    if (( mounted )); then
+        /run/wrappers/bin/fusermount3 -u "$mnt" || return
+    fi
+    rmdir "$mnt"
+}
+trap cleanup EXIT
+
+mount-zip "$archive" "$mnt"
+mounted=1
+
+GQ_NEW_INSTANCE=y geeqie "$mnt"

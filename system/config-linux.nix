@@ -65,13 +65,15 @@
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
-    allowInterfaces = [ "wlp64s0" ];
-    publish = {
-      enable = true;
-      addresses = true;
-      domain = true;
-      userServices = true;
-      workstation = true;
+    settings = {
+      server.allow-interfaces = [ "wlp64s0" ];
+      publish = {
+        disable-publishing = false;
+        publish-addresses = true;
+        publish-domain = true;
+        disable-user-service-publishing = false;
+        publish-workstation = true;
+      };
     };
   };
 
