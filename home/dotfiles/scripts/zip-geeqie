@@ -13,7 +13,8 @@ cleanup() {
 }
 trap cleanup EXIT
 
-mount-zip "$archive" "$mnt"
+# mount-zip "$archive" "$mnt"
+archivemount "$archive" "$mnt"
 mounted=1
 
 GQ_NEW_INSTANCE=y geeqie "$mnt"

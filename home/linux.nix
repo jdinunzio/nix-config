@@ -11,6 +11,7 @@
     #bazelisk
 
     # cli
+    archivemount
     below
     dotool  # keyboard+mouse macro
     # busybox  # for fuser, but overides other tools
@@ -46,6 +47,7 @@
     maestral # dropbox replacement
     maestral-gui
     media-downloader
+    pix  # media viewer
     # speechd
     typora
     synfigstudio
