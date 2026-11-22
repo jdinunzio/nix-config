@@ -10,6 +10,7 @@
     ../../system/nix-extra-options.nix
     ../../system/config-linux.nix
     ../../system/config-linux-net.nix
+    ../../system/fuse.nix
     ../../system/packages-linux.nix
   ];
 

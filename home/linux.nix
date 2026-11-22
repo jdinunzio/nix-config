@@ -20,6 +20,7 @@
     libsecret
     lm_sensors
     lsof
+    mount-zip
     #ntfs3g
     ntfsprogs-plus
     piper-tts # text-to-voice
