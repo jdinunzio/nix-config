@@ -105,6 +105,17 @@
   #  '';
   #};
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+    package = pkgs.appimage-run.override {
+      extraPkgs = pkgs:[
+        pkgs.alsa-lib
+        pkgs.libgpg-error
+      ];
+    };
+  };
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
